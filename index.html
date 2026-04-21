@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navuluru Bala Yasaswi | Software Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Navuluru Bala Yasaswi — Aspiring Software Developer, AI & ML Enthusiast. Explore projects, skills, and get in touch." />
+  <meta name="keywords" content="Navuluru Bala Yasaswi, Software Developer, AI, ML, Python, Portfolio" />
+  <meta name="author" content="Navuluru Bala Yasaswi" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="header" class="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">Yasaswi<span>.</span></a>
+
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-text" aria-label="Toggle theme">
+          <i data-lucide="sun" class="theme-icon theme-icon--light"></i>
+          <i data-lucide="moon" class="theme-icon theme-icon--dark"></i>
+        </button>
+        <a href="#contact" class="btn btn-outline-nav">Let's Talk</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-heading">
+          Navuluru Bala<br />
+          <span class="hero-heading-accent">Yasaswi</span>
+        </h1>
+        <p class="hero-title" id="hero-title">
+          <span id="typed-text" class="typed-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-sub">Building intelligent solutions with code and creativity.</p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            <i data-lucide="folder-open"></i> View Projects
+          </a>
+          <a href="#" class="btn btn-secondary" id="hero-download-resume" download>
+            <i data-lucide="download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/yasaswi0209" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30">
+  </a>
+
+          <a href="https://linkedin.com/in/navuluru-bala-yasaswi" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30">
+  </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-code-window">
+          <div class="code-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.name = <span class="str">"Yasaswi"</span>
+        self.role = <span class="str">"Software Dev"</span>
+        self.skills = [<span class="str">"Python"</span>,
+            <span class="str">"AI/ML"</span>, <span class="str">"Web"</span>]
+
+    <span class="kw">def</span> <span class="fn">build</span>(self):
+        <span class="kw">return</span> <span class="str">"Amazing things!"</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats section-sm">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon"><i data-lucide="code-2"></i></div>
+        <div>
+          <span class="stat-number">3</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-icon"><i data-lucide="trophy"></i></div>
+        <div>
+          <span class="stat-number">2</span>
+          <span class="stat-label">Achievements</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-icon"><i data-lucide="star"></i></div>
+        <div>
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-icon"><i data-lucide="graduation-cap"></i></div>
+        <div>
+          <span class="stat-number">B.Tech</span>
+          <span class="stat-label">CS @ KL University</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about section bg-white">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Get to know me better</p>
+
+      <div class="about-grid">
+        <div class="card">
+          <div class="card-icon"><i data-lucide="heart"></i></div>
+          <h3>Passionate Developer</h3>
+          <p>Deeply passionate about software development and artificial intelligence. I turn complex problems into
+            elegant, user-friendly solutions.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i data-lucide="brain"></i></div>
+          <h3>AI & ML Enthusiast</h3>
+          <p>Machine Learning fascinates me — from NLP and recommendation systems to computer vision. I build real-world
+            applications powered by intelligent algorithms.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i data-lucide="code-2"></i></div>
+          <h3>Full-Stack Skills</h3>
+          <p>Skilled in Python, JavaScript, and modern web frameworks. I build robust backends, dynamic frontends, and
+            connect them with clean APIs.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i data-lucide="lightbulb"></i></div>
+          <h3>Problem Solver</h3>
+          <p>I approach every challenge with a problem-solving mindset and a hunger to learn. Continuous improvement is
+            at the core of everything I do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-subtitle">Tools I work with every day</p>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="card">
+          <h3 class="skill-cat-title"><i data-lucide="terminal"></i> Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-percent="90">
+              <div class="skill-bar-header"><span>Python</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-percent="70">
+              <div class="skill-bar-header"><span>C</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-percent="80">
+              <div class="skill-bar-header"><span>JavaScript</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-percent="75">
+              <div class="skill-bar-header"><span>SQL</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="card">
+          <h3 class="skill-cat-title"><i data-lucide="layout"></i> Frontend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-percent="90">
+              <div class="skill-bar-header"><span>HTML</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-percent="85">
+              <div class="skill-bar-header"><span>CSS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item" data-percent="70">
+              <div class="skill-bar-header"><span>React.js</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="card">
+  <h3 class="skill-cat-title">
+    <i data-lucide="server"></i> Backend
+  </h3>
+
+  <div class="skill-bars">
+
+    <!-- FastAPI Only -->
+    <div class="skill-bar-item" data-percent="75">
+      <div class="skill-bar-header">
+        <span>FastAPI</span>
+        <span class="skill-pct">75%</span>
+      </div>
+      <div class="skill-bar-track">
+        <div class="skill-bar-fill"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- Databases -->
+        <div class="card">
+  <h3 class="skill-cat-title">
+    <i data-lucide="database"></i> Databases
+  </h3>
+
+  <div class="skill-bars">
+
+    <!-- MySQL only -->
+    <div class="skill-bar-item" data-percent="80">
+      <div class="skill-bar-header">
+        <span>MySQL</span>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-bar-track">
+        <div class="skill-bar-fill"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- Tools -->
+        <div class="card card-wide">
+          <h3 class="skill-cat-title"><i data-lucide="wrench"></i> Tools & Libraries</h3>
+          <div class="tag-group">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects section bg-white">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A selection of my recent work</p>
+
+      <div class="projects-grid">
+        <!-- Project: AI Insurance (Highlighted) -->
+        <article class="project-card project-card--highlight" id="project-insurance">
+          <div class="project-banner project-banner--dark">
+            <i data-lucide="shield-check"></i>
+            <span class="highlight-badge">⭐ Featured</span>
+          </div>
+          <div class="project-body">
+            <h3>AI-Powered Insurance Risk & Prediction Platform</h3>
+            <p>Built a backend system using FastAPI to integrate multiple ML models.</p>
+
+            <h4 class="project-subhead">Key Contributions</h4>
+            <ul class="project-list">
+              <li>Developed backend services using FastAPI for API requests & data processing</li>
+              <li>Connected & deployed multiple ML models (Random Forest, XGBoost, LightGBM, Prophet, Isolation Forest)
+              </li>
+              <li>Designed end-to-end data flow: Mobile → FastAPI → APIs → ML → Notifications</li>
+            </ul>
+
+            
+
+            <div class="tag-group">
+              <span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">Machine
+                Learning models</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yasaswi0209/guidewire-final" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 1 -->
+        <article class="project-card" id="project-tictactoe">
+          <div class="project-banner project-banner--red">
+            <i data-lucide="gamepad-2"></i>
+          </div>
+          <div class="project-body">
+            <h3>Tic Tac Toe Game</h3>
+            <p>Interactive browser-based Tic Tac Toe with a sleek UI. Focused on DOM manipulation, game logic, and
+              responsive design.</p>
+            <div class="tag-group">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yasaswi0209/TIC-TAC-TOE-GAME" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" id="project-skillgo">
+          <div class="project-banner project-banner--blue">
+            <i data-lucide="briefcase"></i>
+          </div>
+          <div class="project-body">
+            <h3>SKILLGO – Freelancer Job Finder</h3>
+            <p>Location-based job discovery platform connecting freelancers with local opportunities. Features a dual
+              login system.</p>
+            <div class="tag-group">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yasaswi0209" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" id="project-resumematcher">
+          <div class="project-banner project-banner--green">
+            <i data-lucide="file-search"></i>
+          </div>
+          <div class="project-body">
+            <h3>AI Resume Skill Matcher</h3>
+            <p>NLP-powered app using TF-IDF and cosine similarity to match resume skills with job descriptions. Upload a
+              resume and get a score.</p>
+            <div class="tag-group">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Scikit-learn</span><span
+                class="tag">NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yasaswi0209/aiskill-matcher.git" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="education section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="section-subtitle">My academic journey</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <span class="timeline-date">2023 – 2027</span>
+            <h3>B.Tech in Computer Science</h3>
+            <p class="timeline-place">KL University</p>
+            <p>Focused on software engineering, AI/ML, and full-stack development. Actively participating in hackathons
+              and coding competitions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="achievements section bg-white">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <p class="section-subtitle">Milestones I'm proud of</p>
+
+      <div class="achievements-grid">
+        <div class="card card-center">
+          <div class="card-icon card-icon--primary"><i data-lucide="trophy"></i></div>
+          <h3>Smart India Hackathon</h3>
+          <p>Internal round winner — demonstrated innovative problem-solving under time constraints with a team-driven
+            approach.</p>
+        </div>
+        <div class="card card-center">
+          <div class="card-icon card-icon--green"><i data-lucide="rocket"></i></div>
+          <h3>Startup Funding Support</h3>
+          <p>Received support and funding for a startup idea, showcasing entrepreneurial thinking and real-world
+            solution design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have a question or want to work together?</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-info-item card">
+            <i data-lucide="mail"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:2300033733csemdie@gmail.com">2300033733csemdie@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item card">
+            <i data-lucide="phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+917995898003">+91 7995898003</a>
+            </div>
+          </div>
+          <div class="contact-info-item card">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Andhra Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form card" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+            <span class="form-error" id="error-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" required />
+            <span class="form-error" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Your message…" required></textarea>
+            <span class="form-error" id="error-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="contact-submit">
+            <i data-lucide="send"></i> Send Message
+          </button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Navuluru Bala Yasaswi. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/yasaswi0209" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            data-lucide="github"></i></a>
+        <a href="https://linkedin.com/in/navuluru-bala-yasaswi" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:2300033733csemdie@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
