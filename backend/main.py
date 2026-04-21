@@ -57,6 +57,7 @@ You received a new message from your portfolio!
     msg["From"] = sender_email
     msg["To"] = receiver_email
 
+    msg["Reply-To"] = email
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
