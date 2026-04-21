@@ -108,7 +108,7 @@
      -------------------------------------------------------- */
   const form   = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
-  const API    = 'http://localhost:8000';
+  const API = 'https://portfolio-yasaswi.onrender.com';
 
   function showErr(id, msg) {
     const el = document.getElementById(id);

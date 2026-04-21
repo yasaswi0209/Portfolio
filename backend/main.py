@@ -1,20 +1,22 @@
 """
 FastAPI backend for portfolio contact form.
-Run:  uvicorn main:app --reload
+Run: uvicorn main:app --reload
 """
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from database import engine, SessionLocal, Base, ContactMessage
 from datetime import datetime
+import smtplib
+from email.mime.text import MIMEText
 
-# Create tables
+# 🔥 CREATE TABLES
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Portfolio Contact API")
 
-# CORS — allow frontend to call backend
+# 🔓 CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,26 +25,63 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+# 📩 REQUEST MODEL
 class ContactRequest(BaseModel):
     name: str
     email: str
     message: str
 
 
+# 📧 EMAIL FUNCTION
+def send_email(name, email, message):
+    sender_email = "2300033733csemdie@gmail.com"   # ⚠️ CHANGE THIS
+    sender_password = "zejp dccq rauu rjcu"  # your app password
+
+    receiver_email = "2300033733csemdie@gmail.com"  # ⚠️ CHANGE THIS
+
+    subject = f"🚀 New Portfolio Message from {name}"
+
+    body = f"""
+You received a new message from your portfolio!
+
+👤 Name: {name}
+📧 Email: {email}
+
+💬 Message:
+{message}
+"""
+
+    msg = MIMEText(body)
+    msg["Subject"] = subject
+    msg["From"] = sender_email
+    msg["To"] = receiver_email
+
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.send_message(msg)
+    except Exception as e:
+        print("Email sending failed:", e)
+
+
+# 🏠 ROOT
 @app.get("/")
 def root():
-    return {"status": "ok", "message": "Portfolio API is running"}
+    return {"status": "ok", "message": "Portfolio API is running 🚀"}
 
 
+# 📩 CONTACT API (DB + EMAIL)
 @app.post("/contact")
 def submit_contact(data: ContactRequest):
-    """Receive a contact form submission and store it in SQLite."""
+
     if not data.name.strip() or not data.email.strip() or not data.message.strip():
         raise HTTPException(status_code=400, detail="All fields are required.")
 
     db = SessionLocal()
+
     try:
+        # 💾 SAVE TO DATABASE
         entry = ContactMessage(
             name=data.name.strip(),
             email=data.email.strip(),
@@ -52,20 +91,34 @@ def submit_contact(data: ContactRequest):
         db.add(entry)
         db.commit()
         db.refresh(entry)
-        return {"status": "success", "id": entry.id}
+
+        # 📧 SEND EMAIL
+        send_email(entry.name, entry.email, entry.message)
+
+        return {
+            "status": "success",
+            "message": "Message sent successfully 📩",
+            "id": entry.id
+        }
+
     finally:
         db.close()
 
 
+# 📊 VIEW MESSAGES (OPTIONAL)
 @app.get("/messages")
 def list_messages():
-    """List all stored contact messages (admin utility)."""
     db = SessionLocal()
     try:
         msgs = db.query(ContactMessage).order_by(ContactMessage.id.desc()).all()
         return [
-            {"id": m.id, "name": m.name, "email": m.email,
-             "message": m.message, "created_at": m.created_at}
+            {
+                "id": m.id,
+                "name": m.name,
+                "email": m.email,
+                "message": m.message,
+                "created_at": m.created_at
+            }
             for m in msgs
         ]
     finally:
