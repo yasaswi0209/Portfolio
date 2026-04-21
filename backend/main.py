@@ -2,7 +2,7 @@
 FastAPI backend for portfolio contact form.
 Run: uvicorn main:app --reload
 """
-
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -34,10 +34,11 @@ class ContactRequest(BaseModel):
 
 # 📧 EMAIL FUNCTION
 def send_email(name, email, message):
-    sender_email = "2300033733csemdie@gmail.com"   # ⚠️ CHANGE THIS
-    sender_password = "zejp dccq rauu rjcu"  # your app password
+  
 
-    receiver_email = "2300033733csemdie@gmail.com"  # ⚠️ CHANGE THIS
+    sender_email = os.getenv("EMAIL")
+    sender_password = os.getenv("PASSWORD")
+    receiver_email = os.getenv("EMAIL")
 
     subject = f"🚀 New Portfolio Message from {name}"
 
