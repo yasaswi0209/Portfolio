@@ -90,15 +90,17 @@
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
           </div>
-          <!-- CHANGED: code window now shows LLM model-routing code -->
-          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">ModelRouter</span>:
-    <span class="kw">def</span> <span class="fn">route</span>(self, query):
-        score = self.complexity(query)
-        <span class="kw">if</span> score &lt; <span class="str">0.4</span>:
-            model = <span class="str">"fast-small-llm"</span>
-        <span class="kw">else</span>:
-            model = <span class="str">"powerful-llm"</span>
-        <span class="kw">return</span> self.call(model, query)</code></pre>
+          <!-- CHANGED: LLM and RAG removed, FastAPI added -->
+          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">AIEngineer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.name = <span class="str">"Yasaswi"</span>
+        self.ml = [<span class="str">"RandomForest"</span>,
+            <span class="str">"XGBoost"</span>, <span class="str">"LightGBM"</span>]
+        self.nlp = [<span class="str">"TF-IDF"</span>, <span class="str">"Cosine"</span>]
+        self.api = [<span class="str">"FastAPI"</span>]
+
+    <span class="kw">def</span> <span class="fn">build</span>(self):
+        <span class="kw">return</span> <span class="str">"Smart AI systems"</span></code></pre>
         </div>
       </div>
     </div>
@@ -206,7 +208,7 @@
           </div>
         </div>
 
-        <!-- Frontend (React.js removed) -->
+        <!-- Frontend -->
         <div class="card">
           <h3 class="skill-cat-title"><i data-lucide="layout"></i> Frontend</h3>
           <div class="skill-bars">
@@ -243,20 +245,16 @@
           </div>
         </div>
 
-        <!-- AI / ML (edit headings and percentages to match your resume) -->
+        <!-- AI / ML (LLM APIs & RAG removed; ML 75%, NLP 70%) -->
         <div class="card card-wide">
           <h3 class="skill-cat-title"><i data-lucide="brain"></i> AI / ML</h3>
           <div class="skill-bars">
-            <div class="skill-bar-item" data-percent="80">
-              <div class="skill-bar-header"><span>Machine Learning</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-            </div>
             <div class="skill-bar-item" data-percent="75">
-              <div class="skill-bar-header"><span>NLP</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-header"><span>Machine Learning</span><span class="skill-pct">75%</span></div>
               <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <div class="skill-bar-item" data-percent="70">
-              <div class="skill-bar-header"><span>LLM APIs &amp; RAG</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-header"><span>NLP</span><span class="skill-pct">70%</span></div>
               <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
           </div>
