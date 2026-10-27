@@ -74,12 +74,12 @@
 
         <div class="hero-socials">
           <a href="https://github.com/yasaswi0209" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30">
-  </a>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30">
+          </a>
 
           <a href="https://linkedin.com/in/navuluru-bala-yasaswi" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30">
-  </a>
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30">
+          </a>
         </div>
       </div>
 
@@ -90,15 +90,15 @@
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
           </div>
-          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">Developer</span>:
-    <span class="kw">def</span> <span class="fn">__init__</span>(self):
-        self.name = <span class="str">"Yasaswi"</span>
-        self.role = <span class="str">"Software Dev"</span>
-        self.skills = [<span class="str">"Python"</span>,
-            <span class="str">"AI/ML"</span>, <span class="str">"Web"</span>]
-
-    <span class="kw">def</span> <span class="fn">build</span>(self):
-        <span class="kw">return</span> <span class="str">"Amazing things!"</span></code></pre>
+          <!-- CHANGED: code window now shows LLM model-routing code -->
+          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">ModelRouter</span>:
+    <span class="kw">def</span> <span class="fn">route</span>(self, query):
+        score = self.complexity(query)
+        <span class="kw">if</span> score &lt; <span class="str">0.4</span>:
+            model = <span class="str">"fast-small-llm"</span>
+        <span class="kw">else</span>:
+            model = <span class="str">"powerful-llm"</span>
+        <span class="kw">return</span> self.call(model, query)</code></pre>
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@
       <div class="stat-item">
         <div class="stat-icon"><i data-lucide="code-2"></i></div>
         <div>
-          <span class="stat-number">4+</span>
+          <span class="stat-number">5+</span>
           <span class="stat-label">Projects Built</span>
         </div>
       </div>
@@ -189,99 +189,78 @@
           <div class="skill-bars">
             <div class="skill-bar-item" data-percent="90">
               <div class="skill-bar-header"><span>Python</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <div class="skill-bar-item" data-percent="70">
               <div class="skill-bar-header"><span>C</span><span class="skill-pct">70%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <div class="skill-bar-item" data-percent="80">
               <div class="skill-bar-header"><span>JavaScript</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <div class="skill-bar-item" data-percent="75">
               <div class="skill-bar-header"><span>SQL</span><span class="skill-pct">75%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
           </div>
         </div>
 
-        <!-- Frontend -->
+        <!-- Frontend (React.js removed) -->
         <div class="card">
           <h3 class="skill-cat-title"><i data-lucide="layout"></i> Frontend</h3>
           <div class="skill-bars">
             <div class="skill-bar-item" data-percent="90">
               <div class="skill-bar-header"><span>HTML</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
             <div class="skill-bar-item" data-percent="85">
               <div class="skill-bar-header"><span>CSS</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item" data-percent="70">
-              <div class="skill-bar-header"><span>React.js</span><span class="skill-pct">70%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill"></div>
-              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
             </div>
           </div>
         </div>
 
         <!-- Backend -->
         <div class="card">
-  <h3 class="skill-cat-title">
-    <i data-lucide="server"></i> Backend
-  </h3>
-
-  <div class="skill-bars">
-
-    <!-- FastAPI Only -->
-    <div class="skill-bar-item" data-percent="75">
-      <div class="skill-bar-header">
-        <span>FastAPI</span>
-        <span class="skill-pct">75%</span>
-      </div>
-      <div class="skill-bar-track">
-        <div class="skill-bar-fill"></div>
-      </div>
-    </div>
-
-  </div>
-</div>
+          <h3 class="skill-cat-title"><i data-lucide="server"></i> Backend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-percent="75">
+              <div class="skill-bar-header"><span>FastAPI</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
 
         <!-- Databases -->
         <div class="card">
-  <h3 class="skill-cat-title">
-    <i data-lucide="database"></i> Databases
-  </h3>
+          <h3 class="skill-cat-title"><i data-lucide="database"></i> Databases</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-percent="80">
+              <div class="skill-bar-header"><span>MySQL</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
 
-  <div class="skill-bars">
-
-    <!-- MySQL only -->
-    <div class="skill-bar-item" data-percent="80">
-      <div class="skill-bar-header">
-        <span>MySQL</span>
-        <span class="skill-pct">80%</span>
-      </div>
-      <div class="skill-bar-track">
-        <div class="skill-bar-fill"></div>
-      </div>
-    </div>
-
-  </div>
-</div>
+        <!-- AI / ML (edit headings and percentages to match your resume) -->
+        <div class="card card-wide">
+          <h3 class="skill-cat-title"><i data-lucide="brain"></i> AI / ML</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item" data-percent="80">
+              <div class="skill-bar-header"><span>Machine Learning</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-bar-item" data-percent="75">
+              <div class="skill-bar-header"><span>NLP</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-bar-item" data-percent="70">
+              <div class="skill-bar-header"><span>LLM APIs &amp; RAG</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
 
         <!-- Tools -->
         <div class="card card-wide">
@@ -293,6 +272,7 @@
             <span class="tag">Jupyter</span>
             <span class="tag">NumPy</span>
             <span class="tag">Pandas</span>
+            <span class="tag">SciPy</span>
             <span class="tag">Scikit-learn</span>
           </div>
         </div>
@@ -338,6 +318,28 @@
           </div>
         </article>
 
+        <!-- Project: AI Model Routing System -->
+        <article class="project-card" id="project-routing">
+          <div class="project-banner project-banner--dark">
+            <i data-lucide="route"></i>
+          </div>
+          <div class="project-body">
+            <h3>AI Model Routing System</h3>
+            <p>Routes each question to a suitable language model based on its complexity. Compares responses on
+              response time, estimated API cost and answer quality, with a dashboard showing the selected model, the
+              response and performance metrics.</p>
+            <div class="tag-group">
+              <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span
+                class="tag">LLM APIs</span><span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yasaswi0209/AI-Model-Routing-System.git" target="_blank"
+                rel="noopener noreferrer" class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
+            </div>
+          </div>
+        </article>
+
         <!-- Project 1 -->
         <article class="project-card" id="project-tictactoe">
           <div class="project-banner project-banner--red">
@@ -371,8 +373,8 @@
               <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/yasaswi0209" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
+              <a href="https://github.com/yasaswi0209/Freelancing-SKILLIGO-.git" target="_blank"
+                rel="noopener noreferrer" class="btn btn-primary btn-sm"><i data-lucide="github"></i> Code</a>
               <button class="btn btn-secondary btn-sm" disabled><i data-lucide="external-link"></i> Live Demo</button>
             </div>
           </div>
